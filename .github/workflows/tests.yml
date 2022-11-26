@@ -10,20 +10,30 @@ jobs:
         name: ⬣ Lint
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - run: npm install
             - run: npm run lint
+
+    typecheck:
+        name: ʦ TypeScript
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - run: npm install
+            - run: npm run typecheck
+
     vitest:
         name: ⚡ Vitest
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
             - name: Run Vitest
               uses: actions/setup-node@v1
               with:
                   node-version: 16
             - run: npm install
-            - run: npm test
+            - run: npm run test
+
     playwright:
         name: 🎭 Playwright
         timeout-minutes: 60
