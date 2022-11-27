@@ -102,7 +102,7 @@ $properties: (
     $property-values: get('value', $property);
 
     @each $value in $property-values {
-        .u-#{$property-prefix}-#{$value} {
+        .u-#{$property-prefix}-#{strip-unit($value)} {
             #{$property-name}: #{$value};
         }
     }
