@@ -62,3 +62,12 @@ $containers: (
     container-size-md: 1280,
     container-size-lg: 1680,
 );
+
+// Media queries
+$breakpoints: (
+    bp-xs: 320,
+    bp-sm: 480,
+    bp-md: 768,
+    bp-lg: 1024,
+    bp-xl: 1280,
+);
